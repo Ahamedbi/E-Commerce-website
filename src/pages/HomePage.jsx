@@ -324,42 +324,144 @@ export default function HomePage() {
 
       {/* -------------------------------------------------------------
           5. #FUNIROFURNITURE MOSAIC GALLERY
+          Layout matched to the supplied reference image:
+          - centered heading
+          - 5 images across the top
+          - 4 smaller images positioned underneath
+          - no rounded corners
+          - tight, uneven masonry-style spacing
       ------------------------------------------------------------- */}
-      <section className="py-12 text-center overflow-hidden">
-        <p className="text-[#616161] text-lg font-[#616161]">Share your setup with</p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#3A3A3A] mb-8">#FuniroFurniture</h2>
+      <section className="bg-white py-10 sm:py-12 text-center overflow-hidden">
+        <p className="text-[#616161] text-[10px] sm:text-xs font-medium mb-0">
+          Share your setup with
+        </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 px-4 max-w-[1440px] mx-auto items-center">
+        <h2 className="text-xl sm:text-2xl font-bold text-[#222222] mb-5 sm:mb-6">
+          #FuniroFurniture
+        </h2>
+
+        {/* Desktop / tablet reference-style mosaic */}
+        <div className="relative mx-auto w-full max-w-[1120px] h-[270px] sm:h-[330px] px-4 sm:px-6">
+          {/* Top-left */}
           <img
-            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80"
-            alt="Setup 1"
-            className="w-full h-64 sm:h-80 object-cover rounded"
-            onError={(e) => { e.target.src = 'https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/1.png'; }}
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=85"
+            alt="Funiro furniture setup 1"
+            className="absolute left-[3%] top-0 w-[14%] h-[128px] sm:h-[155px] object-cover"
+            onError={(e) => { e.currentTarget.src = 'https://cdn.dummyjson.com/products/images/furniture/Sofa/1.png'; }}
           />
-          {/* Fixed Setup 2 Image */}
+
+          {/* Top-center-left */}
           <img
-            src="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=500&q=80"
-            alt="Setup 2"
-            className="w-full h-48 sm:h-64 object-cover rounded"
-            onError={(e) => { e.target.src = 'https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/1.png'; }}
+            src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=700&q=85"
+            alt="Funiro furniture setup 2"
+            className="absolute left-[19%] top-[25px] w-[21.5%] h-[145px] sm:h-[170px] object-cover"
+            onError={(e) => { e.currentTarget.src = 'https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png'; }}
+          />
+
+          {/* Middle */}
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=700&q=85"
+            alt="Funiro furniture setup 3"
+            className="absolute left-[42.5%] top-[55px] w-[14%] h-[145px] sm:h-[170px] object-cover"
+            onError={(e) => { e.currentTarget.src = 'https://cdn.dummyjson.com/products/images/furniture/Wooden%20Table/1.png'; }}
+          />
+
+          {/* Top-center-right */}
+          <img
+            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=700&q=85"
+            alt="Funiro furniture setup 4"
+            className="absolute left-[58.5%] top-[18px] w-[14%] h-[128px] sm:h-[150px] object-cover"
+            onError={(e) => { e.currentTarget.src = 'https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/1.png'; }}
+          />
+
+          {/* Top-right */}
+          <img
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=700&q=85"
+            alt="Funiro furniture setup 5"
+            className="absolute right-[2%] top-[10px] w-[20%] h-[145px] sm:h-[170px] object-cover"
+            onError={(e) => { e.currentTarget.src = 'https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/1.png'; }}
+          />
+
+          {/* Bottom-left small */}
+          <img
+            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500&q=85"
+            alt="Funiro furniture setup 6"
+            className="absolute left-[8%] top-[145px] sm:top-[170px] w-[9%] h-[100px] sm:h-[125px] object-cover"
+            onError={(e) => { e.currentTarget.src = 'https://cdn.dummyjson.com/products/images/furniture/Bed/1.png'; }}
+          />
+
+          {/* Bottom-center-left */}
+          <img
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=85"
+            alt="Funiro furniture setup 7"
+            className="absolute left-[21%] top-[155px] sm:top-[180px] w-[17%] h-[90px] sm:h-[105px] object-cover"
+            onError={(e) => { e.currentTarget.src = 'https://cdn.dummyjson.com/products/images/furniture/Sofa/1.png'; }}
+          />
+
+          {/* Bottom-center-right small */}
+          <img
+            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=500&q=85"
+            alt="Funiro furniture setup 8"
+            className="absolute left-[59%] top-[155px] sm:top-[165px] w-[8.5%] h-[78px] sm:h-[92px] object-cover"
+            onError={(e) => { e.currentTarget.src = 'https://cdn.dummyjson.com/products/images/furniture/Wooden%20Table/1.png'; }}
+          />
+
+          {/* Bottom-right small */}
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=85"
+            alt="Funiro furniture setup 9"
+            className="absolute right-[11%] top-[160px] sm:top-[175px] w-[13%] h-[90px] sm:h-[105px] object-cover"
+            onError={(e) => { e.currentTarget.src = 'https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png'; }}
+          />
+        </div>
+
+        {/* Mobile: keep the same visual idea without making the tiny desktop
+            coordinates unusable on small screens. */}
+        <div className="grid grid-cols-3 gap-2 px-4 sm:hidden">
+          <img
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=85"
+            alt="Funiro furniture setup 1"
+            className="w-full h-28 object-cover"
           />
           <img
-            src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=500&q=80"
-            alt="Setup 3"
-            className="w-full h-72 sm:h-96 object-cover rounded"
-            onError={(e) => { e.target.src = 'https://cdn.dummyjson.com/products/images/furniture/Sofa/1.png'; }}
+            src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=500&q=85"
+            alt="Funiro furniture setup 2"
+            className="w-full h-28 object-cover"
           />
           <img
-            src="https://images.unsplash.com/photo-1503602642458-232111445657?w=500&q=80"
-            alt="Setup 4"
-            className="w-full h-48 sm:h-64 object-cover rounded"
-            onError={(e) => { e.target.src = 'https://cdn.dummyjson.com/products/images/furniture/Wooden%20Table/1.png'; }}
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=500&q=85"
+            alt="Funiro furniture setup 3"
+            className="w-full h-28 object-cover"
           />
           <img
-            src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=500&q=80"
-            alt="Setup 5"
-            className="w-full h-64 sm:h-80 object-cover rounded col-span-2 lg:col-span-1"
-            onError={(e) => { e.target.src = 'https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png'; }}
+            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&q=85"
+            alt="Funiro furniture setup 4"
+            className="w-full h-28 object-cover"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500&q=85"
+            alt="Funiro furniture setup 5"
+            className="w-full h-28 object-cover"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500&q=85"
+            alt="Funiro furniture setup 6"
+            className="w-full h-28 object-cover"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&q=85"
+            alt="Funiro furniture setup 7"
+            className="w-full h-28 object-cover"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=500&q=85"
+            alt="Funiro furniture setup 8"
+            className="w-full h-28 object-cover"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=85"
+            alt="Funiro furniture setup 9"
+            className="w-full h-28 object-cover"
           />
         </div>
       </section>
